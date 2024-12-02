@@ -25,7 +25,10 @@ print("Preparing query engine ...")
 query_engine = index.as_query_engine()
 print("Ready!")
 
-# os.remove("./pokedex.md")
+try:
+    os.remove("./pokedex.md")
+except OSError:
+    pass
 
 for name in [
     "Shoppug Spree",
